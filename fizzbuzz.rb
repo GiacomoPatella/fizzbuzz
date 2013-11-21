@@ -1,10 +1,21 @@
+def divisible_by_3?(num)
+  num % 3 == 0
+end
+
+
+def divisible_by_5?(num)
+  num % 5 == 0
+end
+
+
+def divisible_by_15?(num)
+  num % 15 == 0
+end
+
+
 def fizzbuzz(num)
-  if num % 15 == 0
-   "fizzbuzz"
-  elsif num % 3 == 0
-   "fizz"
-  elsif num % 5 == 0
-   "buzz"
-  else num
-  end
+  return "fizzbuzz" if divisible_by_15?(num)
+  return "fizz" if divisible_by_3?(num)
+  return "buzz" if divisible_by_5?(num)
+  num
 end
